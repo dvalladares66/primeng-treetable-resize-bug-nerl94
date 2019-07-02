@@ -1,0 +1,28 @@
+body {
+  padding: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ui-treetable .ui-treetable-frozen-view .ui-treetable-tbody > tr > td,
+.ui-treetable .ui-treetable-unfrozen-view .ui-treetable-tbody > tr > td {
+    height: 30px !important;
+    padding: 0 0.5em;
+    white-space: nowrap;
+}
+.ui-treetable .ui-treetable-frozen-view .ui-treetable-tbody > tr > td {
+  border: 1px solid transparent;
+}
+
+.ui-treetable .ui-treetable-unfrozen-view .ui-treetable-tbody > tr > td {
+  border: 1px solid lightgray;
+}
+
+.ui-treetable-scrollable-body {
+  overflow-x: scroll !important;
+  height: 500px !important;
+  max-height: 500px !important;
+  padding-bottom: 0 !important;
+}
+.ui-treetable-frozen-view > .ui-treetable-scrollable-body {
+  border-right: 3px solid lightgray;
+}

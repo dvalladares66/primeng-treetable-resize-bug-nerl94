@@ -1,0 +1,37 @@
+<p-treeTable
+  [columns]="cols" 
+  [frozenColumns]="frozenCols" 
+  [value]="treeValue" 
+  [scrollable]="true" 
+  scrollHeight="200px"
+  frozenWidth="200px"
+  [resizableColumns]="true"
+ >
+    <ng-template pTemplate="colgroup" let-columns>
+        <colgroup>
+            <col *ngFor="let col of columns" style="width:200px">
+        </colgroup>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" ttResizableColumn>
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData="rowData" let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td> 
+        </tr>
+    </ng-template>
+     <ng-template pTemplate="frozenbody" let-rowNode let-rowData="rowData">
+        <tr>          
+          <td>
+            <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+            {{rowData.vin}}
+          </td>
+        </tr>
+    </ng-template>
+</p-treeTable>
