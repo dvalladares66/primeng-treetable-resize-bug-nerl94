@@ -11,7 +11,7 @@
     "@types/node": "10.3.3",
     "rxjs-compat": "6.2.1",
     "font-awesome": "4.7.0",
-    "@angular/core": "6.0.5",
+    "@angular/core": "11.0.5",
     "@angular/http": "6.0.5",
     "@angular/forms": "6.0.5",
     "@types/jasmine": "2.8.8",
